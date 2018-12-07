@@ -23,6 +23,8 @@
     </ion-item>
     <br><br>
     <button ion-button round full (click)="login(usuarioLogin)">Entrar</button>
-    <button ion-button text-center clear small (click)="cadastrar()">Cadastrar | Sing in</button>
+    <div text-center ><button ion-button text-center round class="google" (click)="loginRedesSociais('google')"><img src="assets/imgs/transferir.png"/></button></div>
+    <div text-center ><button ion-button text-center clear small (click)="cadastrar()">Cadastrar | Sing in</button></div>
+    
   </ion-list>
 </ion-content>

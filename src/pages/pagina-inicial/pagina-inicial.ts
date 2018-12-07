@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, ModalController, MenuController } from 'ionic-angular';
 import { ListaAfazeres } from '../../models/listaAfazeres.interface';
 import { Subscription } from 'rxjs';
 import { CadastrarTarefaProvider } from '../../providers/cadastrar-tarefa/cadastrar-tarefa';
@@ -22,7 +22,8 @@ export class PaginaInicialPage {
   subscription: Subscription;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private CadListarPv: CadastrarTarefaProvider, private alert: AlertController, private modal:ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private CadListarPv: CadastrarTarefaProvider, private alert: AlertController, private modal:ModalController, public menuCtrl: MenuController) {
+    this.menuCtrl.swipeEnable(false);
   }
 
   ionViewDidLoad() {
