@@ -1,0 +1,24 @@
+<!--
+  Generated template for the PaginaInicialPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>Minhas tarefas</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let afazer of afazeresArray" class="card">
+    <ion-card-title class="card-title" padding>{{afazer.titulo}}</ion-card-title>
+    <ion-card-content>{{afazer.descricao}}</ion-card-content>
+    <button ion-button clear (click)="editar()">Editar</button>
+    <button ion-button end clear (click)="excluir(afazer.id)">Excluir</button>
+  </ion-card>
+  <ion-fab bottom right>
+    <button ion-fab (click)="cadastrar()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
